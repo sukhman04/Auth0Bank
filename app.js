@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
   var homeViewBtn = document.getElementById('btn-home-view');
   var loginBtn = document.getElementById('qsLoginBtn');
   var logoutBtn = document.getElementById('qsLogoutBtn');
-
+//Get divs for employee and manager and no role 
   var divManager = document.getElementById('divManager');
   var divEmployee = document.getElementById('divEmployee');
   var divNoRole = document.getElementById('divNoRole');
@@ -90,7 +90,7 @@ window.addEventListener('load', function() {
     var expiration = parseInt(expiresAt) || 0;
     return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
   }
-
+   //function for getting role of a user and showing appprpriate divs
   function getUserRole(){
     var promise1 = new Promise(function(resolve, reject) {
       if (!userProfile) {
